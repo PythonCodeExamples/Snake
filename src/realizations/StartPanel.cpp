@@ -46,7 +46,7 @@ void StartPanel::SetActiveButton(int index)
 
 void StartPanel::IncActiveButton()
 {
-	if (active_btn == 2)
+	if (active_btn == btn_count-1)
 		this->SetActiveButton(0);
 	else
 		this->SetActiveButton(active_btn + 1);
@@ -55,7 +55,7 @@ void StartPanel::IncActiveButton()
 void StartPanel::DecActiveButton()
 {
 	if (active_btn == 0)
-		this->SetActiveButton(2);
+		this->SetActiveButton(btn_count-1);
 	else
 		this->SetActiveButton(active_btn - 1);
 }
